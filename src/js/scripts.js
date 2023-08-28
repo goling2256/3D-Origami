@@ -29,8 +29,8 @@ camera.position.set(-10, 30, 30);
 
 
 // Axes when  needed
-// const axesHelper = new THREE.AxesHelper(5);
-// scene.add(axesHelper);
+const axesHelper = new THREE.AxesHelper(5);
+scene.add(axesHelper);
 
 //Setting up mouse controls
 const orbit = new OrbitControls(camera, renderer.domElement);
@@ -52,8 +52,6 @@ const paper = new THREE.Mesh(paperGeometry, materials);
 scene.add(paper);
 
 function animate(time) {
-    paper.rotation.copy(targetRotation);  //Update folding transformations of paper 
-    //paper.rotation.x = time/1000;
 
     requestAnimationFrame(animate);
     renderer.render(scene, camera);
